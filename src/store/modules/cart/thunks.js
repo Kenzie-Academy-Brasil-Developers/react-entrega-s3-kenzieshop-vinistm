@@ -23,5 +23,13 @@ export const finishOrderThunk = () => (dispatch) => {
   const list = [];
   localStorage.setItem("cart", JSON.stringify(list));
   dispatch(finishiOrder(list));
-  alert("Pedido efetuado com sucesso");
+  toast.success('Pedido realizado com sucesso', {
+    position: "top-center",
+    autoClose: 2000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    });
 };
